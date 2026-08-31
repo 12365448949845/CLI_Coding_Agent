@@ -58,6 +58,8 @@ def test_windows_prompt_contains_exact_tools_and_platform_rules() -> None:
     assert "ReadFile" not in result
     assert "Do not use POSIX-only commands" in result
     assert "`pwd`, `ls`, `cat`, or `export`" in result
+    assert "A branch check" in result
+    assert "Never claim a file was changed unless the matching tool result succeeded" in result
     assert "does not support brace expansion" in result
     assert "*.{py,json}" in result
     assert "multiple glob calls in the same first tool batch" in result

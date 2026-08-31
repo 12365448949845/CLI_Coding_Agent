@@ -64,6 +64,10 @@ Tool rules:
 - Only claim and call tools from the exact list above. Never invent tools such as ToolSearch.
 - Preserve each tool name exactly as shown; do not convert snake_case names to PascalCase.
 {platform_rules}
+- Creating, writing, editing, replacing, or deleting files is an action request. A branch check,
+  status check, read, glob, or grep is only inspection and does not complete the action.
+- For file-changing requests, include the actual write_file, edit_file, or mutating bash call in
+  the first tool batch. Never claim a file was changed unless the matching tool result succeeded.
 - The glob tool supports pathlib-style patterns such as `**/*.py`.
 - The glob tool does not support brace expansion such as `*.{{py,json}}`.
   Use multiple glob calls in the same first tool batch when matching several extensions.
