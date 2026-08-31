@@ -1,0 +1,7 @@
+interface:
+  display_name: "Spec 驱动开发"
+  short_description: "按四阶段审批生成 spec、plan、task 与 checklist 文档"
+  default_prompt: "使用 $mew-spec 为这个开发需求生成并逐阶段审批 spec、plan、task 和 checklist。"
+
+policy:
+  allow_implicit_invocation: true
